@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<Title>Roy-Tex | Login</Title>
+{% endblock %}
+{% block body %}
+<section id="form">
+	<!--form-->
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-sm-offset-1">
+				<div class="login-form">
+					<!--login form-->
+					<h2>Welcome to Roy-Tex! Please Login.</h2>
+					<div class="login-other">
+						<span>
+							New Member?
+							<a href="{% url 'signup' %}">Signup</a>
+							here.
+						</span>
+					</div>
+					<form action="login">
+						<input type="email" placeholder="Email Address" />
+						<input type="password" placeholder="Password" />
+						<span>
+							<input type="checkbox" class="checkbox">
+							Keep me signed in
+						</span>
+						<button type="submit" class="btn btn-default">Login</button>
+					</form>
+				</div>
+				<!--/login form-->
+			</div>
+		</div>
+	</div>
+</section>
+<!--/form-->
+{% endblock %}
